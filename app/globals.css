@@ -1,0 +1,161 @@
+@import 'tailwindcss';
+
+/* ---------- Color tokens — dark-only, premium black + blue system ---------- */
+:root {
+  --background: #020617;
+  --background-secondary: #071226;
+  --surface: #0f172a;
+  --surface-raised: #141f38;
+  --foreground: #ffffff;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --accent: #2563eb;
+  --accent-secondary: #3b82f6;
+  --accent-foreground: #ffffff;
+  --accent-soft: rgba(37, 99, 235, 0.25);
+  --success: #34d399;
+  --danger: #f87171;
+}
+
+/* ---------- Tailwind theme wiring ---------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+
+  --font-display: var(--font-instrument-sans);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Fluid type scale — text-hero deliberately conservative so the longest single word
+     in the hero name (no forced line breaks) never overflows its column at any width */
+  --text-hero: clamp(2rem, 1.2rem + 3.2vw, 3.5rem);
+  --text-h1: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
+  --text-h2: clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
+  --text-h3: clamp(1.25rem, 1.05rem + 0.8vw, 1.5rem);
+  --text-body-lg: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
+
+  /* Loading-screen fluid type — the wordmark and the full name both need to shrink enough on
+     narrow viewports that neither ever overflows or gets clipped inside the loading card. */
+  --text-loading-word: clamp(2.75rem, 1.75rem + 6vw, 6rem);
+  --text-loading-name: clamp(1.25rem, 0.95rem + 2vw, 2.25rem);
+
+  /* Radii */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+
+  /* Easing curves */
+  --ease-swift: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Elevation / glow shadows */
+  --shadow-glow-sm: 0 4px 20px -6px var(--color-accent-soft);
+  --shadow-glow-md: 0 12px 40px -10px rgba(37, 99, 235, 0.45);
+  --shadow-elevated: 0 24px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Base ---------- */
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  overflow-x: hidden;
+}
+
+html.lenis {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  position: relative;
+  overflow-x: clip;
+  max-width: 100vw;
+}
+
+/* Low-opacity noise texture, no image request */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+/* Basic, discourage-only source protection — never relied on for real security.
+   Decorative (aria-hidden) elements aren't meant to be selected, and images/media
+   shouldn't be draggable out of the page. */
+[aria-hidden='true'] {
+  user-select: none;
+}
+
+img,
+video {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@keyframes blink-caret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink-caret {
+  animation: blink-caret 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
