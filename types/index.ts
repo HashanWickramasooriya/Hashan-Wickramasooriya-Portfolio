@@ -61,6 +61,8 @@ export interface EducationEntry {
   period: string;
   credentials: string[];
   logo: string;
+  /** Overrides the period-derived study status (e.g. a degree finished ahead of its stated end year). */
+  completed?: boolean;
 }
 
 export interface TechItem {

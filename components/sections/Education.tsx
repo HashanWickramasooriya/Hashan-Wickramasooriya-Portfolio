@@ -35,7 +35,7 @@ export function Education() {
 
           <ol className="space-y-8">
             {education.map((entry) => {
-              const status = getStudyStatus(entry.period);
+              const status = entry.completed ? 'Completed' : getStudyStatus(entry.period);
               const inProgress = status === 'In Progress';
 
               return (
