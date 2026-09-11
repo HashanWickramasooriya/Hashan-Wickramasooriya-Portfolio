@@ -204,6 +204,56 @@ export const projects: Project[] = [
     liveUrl: null,
     comingSoonLabel: 'Game Coming Soon',
   },
+  {
+    slug: 'recipe-finder',
+    name: 'Recipe-Finder',
+    description:
+      'A modern recipe discovery platform that helps users explore recipes and find meal ideas through a simple and engaging browsing experience.',
+    stack: [],
+    category: 'Web App',
+    repoUrl: 'https://github.com/HashanWickramasooriya/Recipe-Finder',
+    liveUrl: 'https://recipefinderall.netlify.app/',
+  },
+  {
+    slug: 'finora-personal-finance-wealth-management-platform',
+    name: 'Finora--Personal Finance Wealth Management Platform',
+    description:
+      'A personal finance platform designed to help users manage their finances, track financial activity, and make smarter wealth management decisions.',
+    stack: [],
+    category: 'Web App',
+    repoUrl: 'https://github.com/HashanWickramasooriya/Finora---Personal-Finance-Wealth-Management-Platform',
+    liveUrl: 'https://finorafinancemanagement.netlify.app/',
+  },
+  {
+    slug: 'hospital-healthcare-management-system',
+    name: 'Hospital Healthcare Management System',
+    description:
+      'A healthcare management system designed to streamline hospital operations, patient management, and essential healthcare-related workflows through a centralized platform.',
+    stack: [],
+    category: 'Web App',
+    repoUrl: 'https://github.com/HashanWickramasooriya/Hospital-Healthcare-Management-System',
+    liveUrl: 'https://hospitalhealthcaremanagementsystem.netlify.app/',
+  },
+  {
+    slug: 'small-business-operations-saas',
+    name: 'Small Business Operations SaaS',
+    description:
+      'A SaaS platform designed to help small businesses manage daily operations, streamline workflows, and improve productivity through a centralized digital workspace.',
+    stack: [],
+    category: 'Web App',
+    repoUrl: 'https://github.com/HashanWickramasooriya/Small-Business-Operations-SaaS',
+    liveUrl: 'https://small-business-operations-saas.netlify.app/',
+  },
+  {
+    slug: 'career-sync',
+    name: 'Career Sync',
+    description:
+      'A career and job management platform designed to connect job seekers with opportunities while providing a streamlined experience for managing the job search process.',
+    stack: [],
+    category: 'Web App',
+    repoUrl: 'https://github.com/HashanWickramasooriya/CareerSync',
+    liveUrl: 'https://careersyncjob.netlify.app/',
+  },
 ];
 
 /** Curated highlights shown on the homepage — a small, varied sample; the full list lives on /projects. */
