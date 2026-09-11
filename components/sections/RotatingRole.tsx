@@ -11,10 +11,10 @@ import { useAppReady } from '@/components/providers/AppShell';
 const START_DELAY_MS = 1300;
 
 /**
- * Typewriter: types a role, pauses 2s, deletes it, moves to the next — loops forever.
+ * Typewriter: types a role, pauses 2s, deletes it, moves to the next, loops forever.
  * Starts once the loading screen has handed off (`ready`) and the hero name/title have had a
  * moment to settle. Keeps cycling under reduced motion too (character-by-character text swap
- * isn't a vestibular motion trigger) — only the transform-heavy effects elsewhere get disabled.
+ * isn't a vestibular motion trigger); only the transform-heavy effects elsewhere get disabled.
  */
 export function RotatingRole() {
   const reducedMotion = useReducedMotion();

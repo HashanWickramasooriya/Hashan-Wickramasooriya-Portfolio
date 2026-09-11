@@ -7,7 +7,7 @@ import { useAppReady } from '@/components/providers/AppShell';
 import { NoiseOverlay } from '@/components/ui/NoiseOverlay';
 import { HeroBackgroundLetters } from './HeroBackgroundLetters';
 
-/** Preset positions/timings — deterministic so server and client markup match (no Math.random() at render).
+/** Preset positions/timings, deterministic so server and client markup match (no Math.random() at render).
  * Kept intentionally small: each one is its own always-running Framer Motion animation. */
 const particles = [
   { top: '18%', left: '12%', size: 3, duration: 9, delay: 0 },
@@ -15,7 +15,7 @@ const particles = [
   { top: '68%', left: '64%', size: 3, duration: 12, delay: 0.6 },
 ];
 
-/** Soft drifting grid, cursor-reactive accent glow, and a handful of floating particles — confined to the hero. */
+/** Soft drifting grid, cursor-reactive accent glow, and a handful of floating particles, confined to the hero. */
 export function HeroBackground() {
   const reducedMotion = useReducedMotion();
   const ready = useAppReady();
@@ -43,7 +43,7 @@ export function HeroBackground() {
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       <HeroBackgroundLetters />
 
-      {/* Fine "blueprint" grid — a second, denser layer beneath the main grid for extra engineering-drawing depth.
+      {/* Fine "blueprint" grid, a second, denser layer beneath the main grid for extra engineering-drawing depth.
           Both grid layers fade in slowly as the loading screen hands off, rather than snapping to full opacity. */}
       <motion.div
         className="absolute inset-0"
@@ -70,7 +70,7 @@ export function HeroBackground() {
       />
 
       <NoiseOverlay />
-      {/* Ambient glow — a static base light layer (no longer an always-running sweep loop) */}
+      {/* Ambient glow, a static base light layer (no longer an always-running sweep loop) */}
       <div
         aria-hidden="true"
         className="absolute top-[30%] left-[25%] h-120 w-120 rounded-full opacity-40 blur-3xl"

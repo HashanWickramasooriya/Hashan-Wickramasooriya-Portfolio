@@ -13,7 +13,7 @@ type FilterValue = ProjectCategory | 'All';
 const CATEGORIES: FilterValue[] = ['All', 'Web App', 'Mobile App', 'AI', 'E-commerce', '3D / Interactive', 'Game'];
 
 /** Search + category filter over the full project collection. Entrance animation on the results
- * grid is desktop-only, same rule as ProjectCard — see useIsDesktop. */
+ * grid is desktop-only, same rule as ProjectCard; see useIsDesktop. */
 export function ProjectsBrowser() {
   const isDesktop = useIsDesktop();
   const [query, setQuery] = useState('');

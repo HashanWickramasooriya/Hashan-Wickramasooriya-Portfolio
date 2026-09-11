@@ -8,7 +8,7 @@ export const EASE_INOUT = [0.65, 0, 0.35, 1] as const;
 // `opacity`. `useReducedMotion()` can legitimately flip its value a moment after mount (it starts
 // `false` during SSR/hydration, then settles to the real client value). If a component is still
 // mid-animation when that happens and its variants object swaps to one with a different shape,
-// Framer Motion only manages properties present in the *current* target — any property missing
+// Framer Motion only manages properties present in the *current* target; any property missing
 // from the new variant (e.g. `filter` or `y`) is never told to reset, so it gets stuck at
 // whatever value was last applied. Matching shapes avoids that entirely.
 
@@ -71,7 +71,7 @@ export function staggerContainer(stagger = 0.07, delayChildren = 0): Variants {
 
 // A percentage margin (rather than a fixed pixel value) scales with the viewport instead of
 // eating a fixed chunk of it. A flat `-80px` shrinks the IntersectionObserver's root by 80px on
-// every side regardless of viewport size — on a short laptop viewport (browser zoom, display
+// every side regardless of viewport size; on a short laptop viewport (browser zoom, display
 // scaling, a small screen) or a narrow mobile width, that fixed amount can consume a large enough
 // fraction of the available space that elements near an edge (e.g. the left column of a 2-column
 // grid on a narrow phone) never register a large enough intersection to reliably trigger. A

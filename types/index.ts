@@ -48,7 +48,7 @@ export interface Project {
 export interface ExperienceEntry {
   role: string;
   organization: string;
-  /** Company website — when present, the organization name links out to it. */
+  /** Company website, when present, the organization name links out to it. */
   organizationUrl?: string;
   startDate: string;
   endDate: string;
@@ -67,7 +67,7 @@ export interface EducationEntry {
 
 export interface TechItem {
   name: string;
-  /** SVG path `d` data (viewBox 0 0 24 24) — sourced from simple-icons, verified official marks only. */
+  /** SVG path `d` data (viewBox 0 0 24 24), sourced from simple-icons, verified official marks only. */
   path: string;
 }
 

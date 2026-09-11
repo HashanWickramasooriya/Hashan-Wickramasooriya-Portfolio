@@ -11,9 +11,9 @@ interface AnimatedCounterProps {
   className?: string;
   /** Extra gate beyond in-view, e.g. "don't start until the loading screen is done." Defaults to true. */
   active?: boolean;
-  /** Fixed duration in seconds — deterministic, unlike spring physics, so "finishes in ~2s" is exact. */
+  /** Fixed duration in seconds, deterministic, unlike spring physics, so "finishes in ~2s" is exact. */
   durationS?: number;
-  /** Seconds to wait, once in-view and active, before counting starts — lets a counter's start line up with when its card actually becomes visible (e.g. a staggered floating card). */
+  /** Seconds to wait, once in-view and active, before counting starts; lets a counter's start line up with when its card actually becomes visible (e.g. a staggered floating card). */
   delayS?: number;
 }
 
@@ -28,7 +28,7 @@ export function AnimatedCounter({
   delayS = 0,
 }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  // Percentage margin, not a fixed pixel value — see the identical rationale on `viewportOnce`
+  // Percentage margin, not a fixed pixel value; see the identical rationale on `viewportOnce`
   // in lib/motion.ts. A flat -80px disproportionately shrinks the trigger zone on narrow/short
   // viewports, which is exactly what made specific grid columns unreliable on some phones.
   const inView = useInView(ref, { once: true, margin: '-10%' });

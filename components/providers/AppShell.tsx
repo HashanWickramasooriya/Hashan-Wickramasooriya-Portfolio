@@ -11,7 +11,7 @@ const AppReadyContext = createContext(false);
 /** Hard ceiling: the homepage must never stay gated behind the loading screen, no matter what. */
 const READY_FAILSAFE_MS = 12000;
 
-/** True once the loading screen has finished — gates the hero's one-shot entrance animations. */
+/** True once the loading screen has finished, gates the hero's one-shot entrance animations. */
 export function useAppReady(): boolean {
   return useContext(AppReadyContext);
 }

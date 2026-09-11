@@ -6,7 +6,7 @@ import { staggerContainer } from '@/lib/motion';
 import { useAppReady } from '@/components/providers/AppShell';
 import { SkillChip } from './SkillChip';
 
-/** Flattened, deduplicated tech pills — reuses the same SkillChip used in the Skills section. Gated on the loading screen finishing, not on scroll, since it's above the fold. */
+/** Flattened, deduplicated tech pills, reuses the same SkillChip used in the Skills section. Gated on the loading screen finishing, not on scroll, since it's above the fold. */
 export function HeroTechRow({ startDelayS = 0 }: { startDelayS?: number }) {
   const ready = useAppReady();
   const skills = [...new Set(skillGroups.flatMap((group) => group.skills))];

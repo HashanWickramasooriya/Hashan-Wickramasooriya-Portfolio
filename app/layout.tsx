@@ -9,7 +9,7 @@ const instrumentSans = Instrument_Sans({
   subsets: ['latin'],
 });
 
-// Closest available match to "Snasm Light Italic" for the loading screen's wordmark — an elegant,
+// Closest available match to "Snasm Light Italic" for the loading screen's wordmark, an elegant,
 // light-weight serif italic in the same luxury/editorial register.
 const cormorantGaramond = Cormorant_Garamond({
   variable: '--font-cormorant',

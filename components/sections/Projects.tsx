@@ -11,7 +11,7 @@ import { ProjectCard } from './ProjectCard';
 
 export function Projects() {
   // Homepage shows a small curated sample; the full collection lives on /projects. Entrance
-  // animations here are desktop-only — see useIsDesktop and ProjectCard for the same rule.
+  // animations here are desktop-only; see useIsDesktop and ProjectCard for the same rule.
   const isDesktop = useIsDesktop();
 
   const heading = (

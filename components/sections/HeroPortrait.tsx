@@ -18,8 +18,8 @@ const corners = ['-top-3 -left-3', '-top-3 -right-3', '-bottom-3 -left-3', '-bot
 const rings = ['-inset-4', '-inset-9'];
 
 /** Distinctive image treatment: offset accent frame, animated corner reticle marks, static rings,
- * and a soft scroll parallax plus pointer tilt — the hero's visual centerpiece. Rings/inner glow
- * are static (not looping) and there's no scan-line sweep — kept the one-shot entrance and the
+ * and a soft scroll parallax plus pointer tilt, the hero's visual centerpiece. Rings/inner glow
+ * are static (not looping) and there's no scan-line sweep; kept the one-shot entrance and the
  * interactive pointer tilt, dropped the always-running decorative loops. */
 export function HeroPortrait() {
   const reducedMotion = useReducedMotion();
@@ -47,7 +47,7 @@ export function HeroPortrait() {
     rotateY.set(0);
   }
 
-  // Both branches always specify the same keys (opacity, y, scale) — see the identical fix and
+  // Both branches always specify the same keys (opacity, y, scale); see the identical fix and
   // rationale in MaskedHeadline.tsx: `reducedMotion` can legitimately flip a moment after mount,
   // and a shape mismatch between the two branches would strand `y`/`scale` at whatever value was
   // last applied instead of resolving to the new target.

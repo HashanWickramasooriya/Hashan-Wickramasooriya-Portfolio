@@ -17,7 +17,7 @@ const DEVTOOLS_OPEN_STREAK = 3;
 const DEVTOOLS_CLOSE_STREAK = 2;
 
 /**
- * Casual, client-side "discourage inspection" layer — not real security. Disables the context
+ * Casual, client-side "discourage inspection" layer, not real security. Disables the context
  * menu and common DevTools shortcuts (with a toast explaining why), and shows a dismissible
  * glass overlay when a DevTools panel looks docked to the window. All of this is trivially
  * bypassable and is only meant to nudge casual visitors, per the request that spawned it.
@@ -59,14 +59,14 @@ export function SourceProtection() {
   }, [notify]);
 
   useEffect(() => {
-    // This heuristic is for the live/production site only — during local development DevTools
+    // This heuristic is for the live/production site only; during local development DevTools
     // is expected to be open constantly, and the resulting full-page blur overlay would otherwise
     // sit on top of the entire app (same z-index as the loading screen, mounted after it) any time
     // a developer is actually working with the console open.
     if (process.env.NODE_ENV !== 'production') return;
 
     // Docked DevTools panels aren't really a mobile/touch scenario, and the width/height-gap
-    // heuristic is especially unreliable there — skip it entirely on coarse-pointer devices.
+    // heuristic is especially unreliable there; skip it entirely on coarse-pointer devices.
     if (window.matchMedia('(pointer: coarse)').matches) return;
 
     let openStreak = 0;

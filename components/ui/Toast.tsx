@@ -16,7 +16,7 @@ interface ToastProps {
   tone?: 'success' | 'notice';
 }
 
-/** Top-right glass toast — a secondary, less intrusive confirmation alongside the success modal. Auto-dismisses. */
+/** Top-right glass toast, a secondary, less intrusive confirmation alongside the success modal. Auto-dismisses. */
 export function Toast({
   open,
   onClose,

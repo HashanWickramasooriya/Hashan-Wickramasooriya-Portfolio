@@ -256,7 +256,7 @@ export const projects: Project[] = [
   },
 ];
 
-/** Curated highlights shown on the homepage — a small, varied sample; the full list lives on /projects. */
+/** Curated highlights shown on the homepage, a small, varied sample; the full list lives on /projects. */
 export const featuredProjectSlugs = [
   'ai-powered-learning-management-system',
   'autox-3d-car-showroom',

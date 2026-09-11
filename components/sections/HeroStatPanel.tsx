@@ -14,11 +14,11 @@ interface HeroStatPanelProps {
   label: string;
   className?: string;
   floatDelay?: number;
-  /** When this card fades/slides into view, distinct from `floatDelay` (which paces the ongoing idle float loop) — lets a set of cards appear one by one instead of all at once. */
+  /** When this card fades/slides into view, distinct from `floatDelay` (which paces the ongoing idle float loop); lets a set of cards appear one by one instead of all at once. */
   entranceDelay?: number;
 }
 
-/** A floating glass stat card — one of the small engineering-dashboard-style panels around the hero portrait. */
+/** A floating glass stat card, one of the small engineering-dashboard-style panels around the hero portrait. */
 export function HeroStatPanel({
   icon,
   value,

@@ -5,7 +5,7 @@ import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 
 /**
- * Ambient mouse-follow spotlight — a large, soft, low-opacity blue glow, fine-pointer only.
+ * Ambient mouse-follow spotlight, a large, soft, low-opacity blue glow, fine-pointer only.
  * The system cursor is never hidden or replaced; this is a purely additive lighting layer,
  * GPU-accelerated (transform + opacity only, no layout properties).
  */

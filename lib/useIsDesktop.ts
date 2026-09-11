@@ -6,7 +6,7 @@ const QUERY = '(min-width: 1024px)';
 
 /**
  * True only at the `lg` breakpoint and above. Used to gate the Projects section's motion/hover
- * effects to desktop only — tablet and mobile intentionally render the static path.
+ * effects to desktop only; tablet and mobile intentionally render the static path.
  *
  * Same hydration-safe pattern as `useReducedMotion`: `getServerSnapshot` always returns `false`,
  * so the server render and the client's first hydration pass agree (mobile-safe by default), and

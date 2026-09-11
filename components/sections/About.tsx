@@ -19,7 +19,7 @@ export function About() {
           <SectionHeading eyebrow="About" title="A bit about my journey." />
         </Reveal>
 
-        {/* Asymmetric 12-col editorial grid — bio and facts sit on either side of a deliberate gutter break */}
+        {/* Asymmetric 12-col editorial grid, bio and facts sit on either side of a deliberate gutter break */}
         <div className="mt-8 grid gap-y-6 lg:grid-cols-12 lg:gap-x-8">
           <Reveal variant="left" className="space-y-3 lg:col-span-7">
             {aboutParagraphs.map((paragraph) => (

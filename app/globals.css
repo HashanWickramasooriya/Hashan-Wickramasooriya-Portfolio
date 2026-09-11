@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-/* ---------- Color tokens — dark-only, premium black + blue system ---------- */
+/* ---------- Color tokens: dark-only, premium black + blue system ---------- */
 :root {
   --background: #020617;
   --background-secondary: #071226;
@@ -39,7 +39,7 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 
-  /* Fluid type scale — text-hero deliberately conservative so the longest single word
+  /* Fluid type scale, text-hero deliberately conservative so the longest single word
      in the hero name (no forced line breaks) never overflows its column at any width */
   --text-hero: clamp(2rem, 1.2rem + 3.2vw, 3.5rem);
   --text-h1: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
@@ -47,7 +47,7 @@
   --text-h3: clamp(1.25rem, 1.05rem + 0.8vw, 1.5rem);
   --text-body-lg: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
 
-  /* Loading-screen fluid type — the wordmark and the full name both need to shrink enough on
+  /* Loading-screen fluid type, the wordmark and the full name both need to shrink enough on
      narrow viewports that neither ever overflows or gets clipped inside the loading card. */
   --text-loading-word: clamp(2.75rem, 1.75rem + 6vw, 6rem);
   --text-loading-name: clamp(1.25rem, 0.95rem + 2vw, 2.25rem);
@@ -109,7 +109,7 @@ body::before {
   color: var(--color-accent-foreground);
 }
 
-/* Basic, discourage-only source protection — never relied on for real security.
+/* Basic, discourage-only source protection, never relied on for real security.
    Decorative (aria-hidden) elements aren't meant to be selected, and images/media
    shouldn't be draggable out of the page. */
 [aria-hidden='true'] {

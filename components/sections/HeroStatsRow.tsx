@@ -9,7 +9,7 @@ interface Stat {
   label: string;
 }
 
-/** In-flow stats strip (as opposed to the floating panels) — visible at every breakpoint, not just desktop. */
+/** In-flow stats strip (as opposed to the floating panels), visible at every breakpoint, not just desktop. */
 export function HeroStatsRow({ stats, startDelayS = 0 }: { stats: Stat[]; startDelayS?: number }) {
   const ready = useAppReady();
 

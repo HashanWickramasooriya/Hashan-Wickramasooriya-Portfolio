@@ -10,7 +10,7 @@ function parseMonthYear(value: string): Date | null {
   return new Date(Number(match[2]), monthIndex, 1);
 }
 
-/** Whole years between the earliest experience entry's start date and today — computed, never authored. */
+/** Whole years between the earliest experience entry's start date and today, computed, never authored. */
 export function getYearsOfExperience(entries: ExperienceEntry[]): number {
   const starts = entries.map((entry) => parseMonthYear(entry.startDate)).filter(Boolean) as Date[];
   if (starts.length === 0) return 0;

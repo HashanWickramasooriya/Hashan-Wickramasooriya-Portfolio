@@ -5,7 +5,7 @@ export const education: EducationEntry[] = [
     institution: 'ICBT Campus',
     period: '2022 – 2026',
     credentials: [
-      'BSc (Hons) Software Engineering — Second Upper',
+      'BSc (Hons) Software Engineering - Second-Class Upper Division',
       'Higher Diploma in Computing and Software Engineering',
     ],
     logo: '/images/education/icbt.png',
@@ -14,7 +14,7 @@ export const education: EducationEntry[] = [
   {
     institution: 'Cardiff Metropolitan University',
     period: '2022 – 2026',
-    credentials: ['BSc (Hons) Software Engineering (degree awarding body) — Second Upper'],
+    credentials: ['BSc (Hons) Software Engineering - Second-Class Upper Division'],
     logo: '/images/education/cardiff.png',
     completed: true,
   },

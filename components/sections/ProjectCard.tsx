@@ -14,7 +14,7 @@ const linkClasses =
   'text-foreground border-border-strong lg:hover:border-accent/60 lg:hover:bg-accent-soft lg:hover:text-accent-secondary inline-flex items-center gap-2 rounded-full border bg-white/[0.02] px-4 py-2 text-xs font-medium backdrop-blur-sm lg:transition-colors lg:duration-200';
 
 export function ProjectCard({ project }: { project: Project }) {
-  // Gates the card's motion (hover lift, cursor spotlight) to desktop only — see useIsDesktop for
+  // Gates the card's motion (hover lift, cursor spotlight) to desktop only; see useIsDesktop for
   // why this is a hook rather than a CSS class: the spotlight/lift are Framer Motion props, which
   // can only be turned off in JS. Everything else that CAN be expressed in pure CSS (the link
   // hover/transition colors above) uses `lg:` responsive classes instead, a real media query.

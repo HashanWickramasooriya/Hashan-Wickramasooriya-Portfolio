@@ -15,7 +15,7 @@ interface LuxuryCtaButtonProps {
 }
 
 /**
- * Premium glassmorphism CTA — a thin animated blue-to-purple gradient border (two stacked spans
+ * Premium glassmorphism CTA, a thin animated blue-to-purple gradient border (two stacked spans
  * using a padding-box/border-box style layering, not a real CSS `border`), a frosted-glass
  * surface, an opacity-driven outer glow (never an animated `box-shadow`, which is expensive to
  * repaint every frame), and a one-shot shine sweep on hover. Everything that animates on
@@ -37,7 +37,7 @@ export function LuxuryCtaButton({ href, children, className }: LuxuryCtaButtonPr
       transition={{ type: 'spring', stiffness: 380, damping: 26 }}
       className={cn('group relative inline-block rounded-[15px] p-px select-none', className)}
     >
-      {/* Outer glow — a blurred, opacity-driven layer rather than an animated box-shadow */}
+      {/* Outer glow, a blurred, opacity-driven layer rather than an animated box-shadow */}
       <motion.span
         aria-hidden="true"
         initial={{ opacity: 0.35 }}

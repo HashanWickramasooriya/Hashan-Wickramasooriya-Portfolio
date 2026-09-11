@@ -12,13 +12,13 @@ interface HeroStatusCardProps {
   value: string;
   className?: string;
   floatDelay?: number;
-  /** When this card fades/slides into view, distinct from `floatDelay` (which paces the ongoing idle float loop) — lets a set of cards appear one by one instead of all at once. */
+  /** When this card fades/slides into view, distinct from `floatDelay` (which paces the ongoing idle float loop); lets a set of cards appear one by one instead of all at once. */
   entranceDelay?: number;
   /** Shows a pulsing status dot (e.g. "Available for Work") instead of the icon-in-swatch treatment. */
   live?: boolean;
 }
 
-/** A floating glass status card — non-numeric sibling to HeroStatPanel, for short text states like availability or current focus. */
+/** A floating glass status card, non-numeric sibling to HeroStatPanel, for short text states like availability or current focus. */
 export function HeroStatusCard({
   icon,
   label,

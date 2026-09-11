@@ -81,7 +81,7 @@ function ErrorIcon() {
   );
 }
 
-/** Centered glass dialog — success/error confirmation for the contact form. Blurs the backdrop,
+/** Centered glass dialog, success/error confirmation for the contact form. Blurs the backdrop,
  * traps focus while open, and closes on Escape or an outside click. */
 export function Modal({ open, onClose, variant, title, description, actionLabel }: ModalProps) {
   const reducedMotion = useReducedMotion();

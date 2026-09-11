@@ -5,7 +5,7 @@ import { EASE_SWIFT } from '@/lib/motion';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 
 interface MaskedHeadlineProps {
-  /** Each entry is one reveal unit. Text within an entry wraps naturally — it is never forced onto its own unbreakable line. */
+  /** Each entry is one reveal unit. Text within an entry wraps naturally; it is never forced onto its own unbreakable line. */
   lines: string[];
   className?: string;
   /** Gate the reveal on an external readiness signal (e.g. the loading screen finishing). Defaults to playing immediately. */
@@ -13,7 +13,7 @@ interface MaskedHeadlineProps {
 }
 
 /**
- * Reveals each entry via a clip-mask translate, staggered — used for the hero headline.
+ * Reveals each entry via a clip-mask translate, staggered, used for the hero headline.
  * The mask only clips vertically (overflow-y: hidden) so long words can never be clipped
  * horizontally the way `overflow: hidden` would; normal word-wrap + break-words handle the rest.
  */

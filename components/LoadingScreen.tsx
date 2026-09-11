@@ -27,7 +27,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   }, [visible]);
 
   // Reads the media query directly (rather than depending on the reactive `reducedMotion` value
-  // above) and runs once on mount, so this timer can never be torn down and rebuilt mid-flight —
+  // above) and runs once on mount, so this timer can never be torn down and rebuilt mid-flight;
   // see the identical reasoning that used to live here when this component had a longer timeline.
   useEffect(() => {
     const prefersReduced =
