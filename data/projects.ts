@@ -254,6 +254,16 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/HashanWickramasooriya/CareerSync',
     liveUrl: 'https://careersyncjob.netlify.app/',
   },
+  {
+    slug: 'wayfare-global-travel-super-app',
+    name: 'Wayfare - Global Travel Super App',
+    description:
+      'A global travel super app designed to bring flights, hotels, car rentals, and travel experiences together in one seamless platform.',
+    stack: [],
+    category: 'Web App',
+    repoUrl: 'https://github.com/HashanWickramasooriya/Wayfare---Global-Travel-Super-App',
+    liveUrl: 'https://wayfareglobaltravel.netlify.app/',
+  },
 ];
 
 /** Curated highlights shown on the homepage, a small, varied sample; the full list lives on /projects. */
